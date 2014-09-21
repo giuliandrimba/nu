@@ -1,0 +1,16 @@
+{
+  "name": "mmuniz",
+  "version": "1.0.0",
+  "description": "Marcos Muniz website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giulian Drimba",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.8.8",
+    "ways": "^0.3.4",
+    "ways-browser": "^0.1.1"
+  }
+}
