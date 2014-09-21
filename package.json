@@ -17,7 +17,8 @@
   "browserify": {
     "transform": [
       "coffeeify",
-      "jadeify"
+      "jadeify",
+      "stylify"
     ]
   },
   "devDependencies": {
@@ -36,6 +37,7 @@
     "gulp-uglify": "^1.0.1",
     "gulp-util": "^3.0.1",
     "pretty-hrtime": "^0.2.1",
+    "stylify": "^0.1.6",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^1.0.2"
   }
