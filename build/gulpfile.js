@@ -12,6 +12,21 @@ var concat       = require("gulp-concat");
 var uglify       = require("gulp-uglify");
 var gutil        = require('gulp-util');
 var gStreamify   = require("gulp-streamify");
+var refresh      = require('gulp-livereload');
+var lrserver     = require('tiny-lr')();
+var express      = require('express');
+var livereload   = require('connect-livereload');
+
+var livereloadport = 35729;
+var serverport = 5000;
+
+var server = express();
+//Add livereload middleware before static-middleware
+server.use(livereload({
+  port: livereloadport
+}));
+
+server.use(express.static('../public'));
 
 var env = argv.env != "production";
 
@@ -46,6 +61,7 @@ gulp.task('browserify', function() {
       // Specify the output destination
       .pipe(argv.env != "production" ? gutil.noop() : gStreamify(uglify()))
       .pipe(gulp.dest('../public/scripts'))
+      .pipe(refresh(lrserver))
       // Log when bundling completes!
       .on('end', bundleLogger.end);
   };
@@ -63,6 +79,7 @@ gulp.task('scripts', function() {
   return gulp.src('src/vendors/scripts/**/*.js')
     .pipe(concat('vendors.js'))
     .pipe(gulp.dest('../public/scripts'))
+    .pipe(refresh(lrserver));
 });
 
 gulp.task('styles', function() {
@@ -76,9 +93,18 @@ gulp.task('styles', function() {
       }
     }))
     .pipe(gulp.dest('../public/styles'))
+    .pipe(refresh(lrserver));
 });
 
-gulp.task('watch', function() {
+gulp.task('serve', function() {
+  //Set up your static fileserver, which serves files in the build dir
+  server.listen(8000);
+ 
+  //Set up your livereload server
+  lrserver.listen();
+});
+
+gulp.task('watch', ["serve"], function() {
 
   gulp.watch('../src/app/styles/**/*.styl', ['styles']);
   gulp.watch('../src/app/styles/**/*.css', ['styles']);

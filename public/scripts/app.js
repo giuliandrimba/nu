@@ -12,6 +12,8 @@ module.exports = App = (function() {
 
 })();
 
+console.log("ini2t");
+
 
 
 },{"./templates/layout.jade":"/Users/giuliandrimba/workspace/mmuniz/mmuniz/src/app/templates/layout.jade"}],"/Users/giuliandrimba/workspace/mmuniz/mmuniz/node_modules/jade/runtime.js":[function(require,module,exports){
