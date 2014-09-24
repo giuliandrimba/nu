@@ -1,11 +1,3 @@
-/* browserify task
-   ---------------
-   Bundle javascripty things with browserify!
-
-   If the watch task is running, this uses watchify instead
-   of browserify for faster bundling using caching.
-*/
-
 var browserify   = require('browserify');
 var jadefy   = require('jadeify');
 var watchify     = require('watchify');
@@ -22,6 +14,10 @@ var gutil        = require('gulp-util');
 var gStreamify   = require("gulp-streamify");
 
 var env = argv.env != "production";
+
+gulp.task('clean', function(cb) {
+    del(['../public/styles', '../public/scripts'], {force:true}, cb)
+});
 
 gulp.task('browserify', function() {
   var bundler = browserify({
@@ -67,10 +63,6 @@ gulp.task('scripts', function() {
   return gulp.src('src/vendors/scripts/**/*.js')
     .pipe(concat('vendors.js'))
     .pipe(gulp.dest('../public/scripts'))
-});
-
-gulp.task('clean', function(cb) {
-    del(['../public/styles', '../public/scripts'], {force:true}, cb)
 });
 
 gulp.task('styles', function() {

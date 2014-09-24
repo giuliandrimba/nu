@@ -7,3 +7,7 @@ b:
 w: 
 	cd build; \
 	$(G) watch
+
+s:
+	cd build; \
+	node server.js
