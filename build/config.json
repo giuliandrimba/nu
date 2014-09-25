@@ -1,0 +1,27 @@
+{
+  "output":
+  {
+    "path": "../public",
+    "scripts": "scripts",
+    "styles": "styles"
+  },
+  "server":
+  {
+    "port": 8000
+  },
+  "browserify":
+  {
+    "path":"../src/app/",
+    "boot":"../src/app/app.coffee"
+  },
+  "scripts":
+  {
+    "path": "../src/vendors/scripts",
+    "output": "vendors.js"
+  },
+  "styles":
+  {
+    "path":"../src/app/styles",
+    "boot":"../src/app/styles/app.styl"
+  }
+}

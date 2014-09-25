@@ -5,4 +5,4 @@ module.exports = class App
   constructor:->
     console.log "teste"
 
-console.log "ini2t"
+console.log "asdasd"

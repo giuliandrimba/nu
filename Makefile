@@ -1,13 +1,13 @@
 G=../node_modules/gulp/bin/gulp.js
+P=./node_modules/pulldown/bin/cli.js
 
 b:
 	cd build; \
-	$(G);
+	$(G) --env production;
 
 w: 
 	cd build; \
 	$(G) watch
 
-s:
-	cd build; \
-	node server.js
+i:
+	$(P) $(l) -o ./src/vendors/scripts
