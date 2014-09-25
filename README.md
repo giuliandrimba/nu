@@ -1,4 +1,4 @@
 nu
 ==
 
-Starter boilerplate for a SPA
+Starter boilerplate for SPA
