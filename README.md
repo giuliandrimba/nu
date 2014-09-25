@@ -18,6 +18,8 @@ __Setup:__
 __Watch:__
 
 ` make s`
+  
+  > Open http://localhost:8000
 
 __Build:__
 
@@ -27,6 +29,10 @@ __Install client-side libs:__
   > It uses PullDown to download the libs from CDNJS.
 
 `make i l jquery`
+
+__Config:__
+
+You can change some config options at `build/config.json`
 
 __Structure:__
 
