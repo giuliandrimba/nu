@@ -11,7 +11,7 @@
   },
   "browserify":
   {
-    "path":"../src/app/",
+    "path":"../src/",
     "boot":"../src/app/app.coffee"
   },
   "scripts":
@@ -21,7 +21,7 @@
   },
   "styles":
   {
-    "path":"../src/app/styles",
-    "boot":"../src/app/styles/app.styl"
+    "path":"../src/styles",
+    "boot":"../src/styles/app.styl"
   }
 }

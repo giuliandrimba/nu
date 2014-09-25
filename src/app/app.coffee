@@ -1,4 +1,4 @@
-Template = require "./templates/layout.jade"
+Template = require "../templates/layout.jade"
 
 module.exports = class App
 
