@@ -1,4 +1,4 @@
-![retain-http](public/img/nu.png)
+![nu](public/img/nu.png)
 ===========
 
 Starter boilerplate for Gulp
@@ -49,7 +49,6 @@ nakedapp
 │       └── vendors.js
 │── src
 │    ├── app
-│    │   ├── app.coffee
 │    │   ├── app.coffee
 │    │   ├── lib
 │    │   ├── models

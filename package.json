@@ -1,7 +1,7 @@
 {
-  "name": "mmuniz",
+  "name": "nu",
   "version": "1.0.0",
-  "description": "Marcos Muniz website",
+  "description": "Starter boilerplate for Gulp",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
