@@ -5,6 +5,7 @@ var clean = require("./tasks/clean");
 var browserify = require("./tasks/browserify");
 var scripts = require("./tasks/scripts");
 var styles = require("./tasks/styles");
+var build = require("./tasks/build");
 var setWatch = require("./tasks/setWatch");
 var watch = require("./tasks/watch");
 
