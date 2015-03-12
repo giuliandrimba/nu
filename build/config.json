@@ -1,0 +1,35 @@
+{
+  "output":
+  {
+    "path": "../public",
+    "scripts": "scripts",
+    "styles": "styles"
+  },
+  "server":
+  {
+    "port": 8000
+  },
+  "browserify":
+  {
+    "path":"../src/",
+    "boot":"../src/app/app.coffee"
+  },
+  "scripts":
+  {
+    "path": "../src/vendors/scripts",
+    "output": "vendors.js"
+  },
+  "styles":
+  {
+    "path":"../src/styles",
+    "boot":"../src/styles/app.styl"
+  },
+  "sprites":
+  {
+    "src":"./src/experience/icons/*.png",
+    "img_name":"../src/styles/app.styl",
+    "img_dest":"/public",
+    "css_name":"../src/styles/app.styl",
+    "css_dest":"./src/experience/styles/shared/"
+  }
+}
