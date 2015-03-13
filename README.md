@@ -4,37 +4,30 @@ Starter boilerplate for Gulp
 
 __Includes:__
   * LiveReload
-  * Browserify
+  * CommonJS
   * Javascript
   * Javascript ES6
   * CoffeeScript
-  * PullDown
-  * CSS
   * Stylus
   * HTML
   * Jade
   * React/JSX
-  * Spritesmith
-  * Image Optmize
+  * Sprite generation
+  * Image optimization
 
 __Setup:__
 
-` make s`
+` make`
 
 __Watch:__
 
-` make s`
+` make w`
   
-  > Open http://localhost:8000
+  > Open http://localhost:3000
 
 __Build:__
 
 ` make b`
-
-__Install client-side libs:__
-  > It uses PullDown to download the libs from CDNJS.
-
-`make i l jquery`
 
 __Config:__
 
@@ -46,37 +39,42 @@ __Structure:__
 nakedapp
 ├── README.md
 ├── package.json
+├── .gitignore
 ├── Makefile
 ├── LICENSE
 ├── public
-│   ├── img
-│   ├── scripts
-│   ├───├── app.js
-│       └── vendors.js
+│    ├─── images
+│    │    └── icons.png
+│    ├─── app.js
+│    ├─── index.html
+│    └─── app.css
 │── src
-│    ├── app
-│    │   ├── app.coffee
-│    │   ├── lib
-│    │   ├── models
-│    │   └── views
+│    ├── images
+│    │   └── icons
+│    ├── scripts
+│    │   ├── models
+│    │   ├── shared
+│    │   │   ├── comp
+│    │   │   └── lib
+│    │   ├── views
+│    │   └── app.js
 │    ├── styles
-│    │   └── app.styl
+│    │   ├── shared
+│    │   │   └── comp
+│    │   └── views
 │    └── templates
-│        └── app.jade
+│    │   ├── comp
+│        └── views
 └── build
     ├── tasks
-    │   ├── browserify.js
-    │   ├── clean.js
-    │   ├── images.js
-    │   ├── scripts.js
-    │   ├── server.js
-    │   ├── styles.js
+    │   ├── browserify.js
+    │   ├── build.js
+    │   ├── clean.js
+    │   ├── images.js
+    │   ├── server.js
+    │   ├── sprites.js
+    │   ├── styles.js
     │   └── watch.js
-    ├── util
-    │   ├── bundleLogger.js
-    │   └── handleErrors.js
     ├── config.json
     └── gulpfile.json
 ````
-
->>>>>>> d5ca9122f27880160251e2d5067b1a98bad8a274
