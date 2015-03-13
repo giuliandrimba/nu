@@ -3,11 +3,11 @@ var spritesmith = require('gulp.spritesmith');
 var server = require("./server");
 var config = require("../config.json");
 
-gulp.task('sprite', function () {
+gulp.task('sprites', function () {
   var spriteData = gulp.src(config.sprites.src).pipe(spritesmith({
-    imgName: config.styles.img_name,
-    cssName: config.styles.css_name
+    imgName: config.sprites.img_name,
+    cssName: config.sprites.css_name
   }));
-  spriteData.img.pipe(gulp.dest(config.styles.img_dest));
-  spriteData.css.pipe(gulp.dest(config.styles.css_dest)).pipe(server.refresh());
+  spriteData.img.pipe(gulp.dest(config.sprites.img_dest));
+  spriteData.css.pipe(gulp.dest(config.sprites.css_dest)).pipe(server.refresh());
 });

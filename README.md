@@ -1,4 +1,4 @@
-![nu](public/img/nu.png)
+![nu](public/images/nu.png)
 
 Starter boilerplate for Gulp
 
@@ -14,6 +14,8 @@ __Includes:__
   * HTML
   * Jade
   * React/JSX
+  * Spritesmith
+  * Image Optmize
 
 __Setup:__
 

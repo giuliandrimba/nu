@@ -1,9 +1,7 @@
 {
   "output":
   {
-    "path": "../public",
-    "scripts": "scripts",
-    "styles": "styles"
+    "path": "../public"
   },
   "server":
   {
@@ -12,12 +10,7 @@
   "browserify":
   {
     "path":"../src/",
-    "boot":"../src/app/app.coffee"
-  },
-  "scripts":
-  {
-    "path": "../src/vendors/scripts",
-    "output": "vendors.js"
+    "boot":"../src/scripts/app.js"
   },
   "styles":
   {
@@ -26,10 +19,18 @@
   },
   "sprites":
   {
-    "src":"./src/experience/icons/*.png",
-    "img_name":"../src/styles/app.styl",
-    "img_dest":"/public",
-    "css_name":"../src/styles/app.styl",
-    "css_dest":"./src/experience/styles/shared/"
+    "src":"../src/images/icons/*.png",
+    "img_name":"images/icons.png",
+    "img_dest":"../public",
+    "css_name":"sprite.styl",
+    "css_dest":"../src/styles/shared/"
+  },
+  "images":
+  {
+    "src":"../src/images/**/*",
+    "img_name":"images/icons.png",
+    "img_dest":"../public",
+    "css_name":"sprite.styl",
+    "css_dest":"../src/styles/shared/"
   }
 }
