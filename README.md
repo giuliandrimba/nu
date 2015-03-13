@@ -141,6 +141,12 @@ var tmpl = require("templates/views/layout")
 console.log(tmpl()); // <div class='layout'><h1>Hello World!</h1></div>
 ```
 
+and yes, you can use the ES6 import syntax to load the templates:
+``` javascript
+import * as tmpl from "templates/views/layout"
+console.log(tmpl()); // <div class='layout'><h1>Hello World!</h1></div>
+```
+
 > Using HTML
 
 ``` html
