@@ -8,6 +8,7 @@ __Includes:__
   * Javascript
   * Javascript ES6
   * CoffeeScript
+  * CSS
   * Stylus
   * HTML
   * Jade
