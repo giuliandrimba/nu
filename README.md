@@ -130,15 +130,44 @@ You can even mix all these features and have some files written in coffeescript,
 
 ## Stylesheets
 
-At the moment, this boilerplate only supports [http://learnboost.github.io/stylus/](Stylus) and CSS (as stylus support plain CSS).
+At the moment, this boilerplate only supports [Stylus](http://learnboost.github.io/stylus/) and CSS (as stylus support plain CSS).
 
 The CSS entry point is the `src/styles/app/styl`, all your styles must be linked to this file:
 
 #### Dependency management
 All your files import path are relative to the `styles` folder:
 > app.styl
+
 ``` stylus
 @import "shared/reset.styl";
 ```
 #### Plain CSS support
 Stylus support the plain CSS syntax!
+
+## Templates
+You can use [Jade](http://jade-lang.com/) or regular HTML as templates, and import them in your scripts:
+
+> Using Jade
+
+``` jade
+.layout
+ h1 Hello World!
+```
+
+``` javascript
+var tmpl = require("templates/views/layout")
+console.log(tmpl()); // <div class='layout'><h1>Hello World!</h1></div>
+```
+
+> Using HTML
+
+``` html
+<div class='layout'>
+ <h1>Hello World!</h1>
+</div>
+```
+
+``` javascript
+var tmpl = require("templates/views/layout")
+console.log(tmpl); // <div class='layout'><h1>Hello World!</h1></div>
+```
