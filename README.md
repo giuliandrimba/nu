@@ -137,13 +137,13 @@ You can use [Jade](http://jade-lang.com/) or regular HTML as templates, and impo
 ```
 
 ``` javascript
-var tmpl = require("templates/views/layout")
+var tmpl = require("templates/views/layout.jade")
 console.log(tmpl()); // <div class='layout'><h1>Hello World!</h1></div>
 ```
 
 and yes, you can use the ES6 import syntax to load the templates:
 ``` javascript
-import * as tmpl from "templates/views/layout"
+import * as tmpl from "templates/views/layout.jade"
 console.log(tmpl()); // <div class='layout'><h1>Hello World!</h1></div>
 ```
 
@@ -156,7 +156,7 @@ console.log(tmpl()); // <div class='layout'><h1>Hello World!</h1></div>
 ```
 
 ``` javascript
-var tmpl = require("templates/views/layout")
+var tmpl = require("templates/views/layout.html")
 console.log(tmpl); // <div class='layout'><h1>Hello World!</h1></div>
 ```
 
