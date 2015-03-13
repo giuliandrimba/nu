@@ -46,7 +46,7 @@ nakedapp
 │    │   │   └── comp
 │    │   └── views
 │    └── templates
-│    │   ├── comp
+│        ├── comp
 │        └── views
 └── build
     ├── tasks
