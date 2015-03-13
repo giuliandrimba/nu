@@ -171,3 +171,16 @@ console.log(tmpl()); // <div class='layout'><h1>Hello World!</h1></div>
 var tmpl = require("templates/views/layout")
 console.log(tmpl); // <div class='layout'><h1>Hello World!</h1></div>
 ```
+
+## Spritesheet
+All the `.png` files inside the `src/images/icons` folder will be assembled as one image at `public/images/icons.png`.
+
+#### CSS
+A `sprites.styl` file will be generated at `src/styles/shared/sprites.styl`, containing all the information about the icons.
+
+> Loading an icon:
+
+``` stylus
+.my-icon
+ sprite($icon_name)
+```
