@@ -11,6 +11,3 @@ b:
 w:
 	cd build; \
 	$(G) watch
-
-i:
-	$(B) install $(l) --save

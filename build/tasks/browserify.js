@@ -18,7 +18,7 @@ gulp.task('browserify', function() {
       extensions: ['.coffee', '.jade', '.html'],
       paths: ['../src', '../node_modules']
     }))
-    .pipe(rename('index.js'))
+    .pipe(rename('app.js'))
     .pipe(argv.env != "production" ? gutil.noop() : gStreamify(uglify()))
     .pipe(gulp.dest('../public'))
     .pipe(server.refresh())
