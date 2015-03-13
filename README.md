@@ -15,24 +15,6 @@ __Includes:__
   * Sprite generation
   * Image optimization
 
-__Setup:__
-
-` make`
-
-__Watch:__
-
-` make w`
-  
-  > Open http://localhost:3000
-
-__Build:__
-
-` make b`
-
-__Config:__
-
-You can change some config options at `build/config.json`
-
 __Structure:__
 
 ````bash
@@ -184,3 +166,23 @@ A `sprites.styl` file will be generated at `src/styles/shared/sprites.styl`, con
 .my-icon
  sprite($icon_name)
 ```
+
+## Setup
+
+__Install dependencies:__
+
+` make`
+
+__Watch:__
+
+` make w`
+  
+  > Open http://localhost:3000
+
+__Build:__
+
+` make b`
+
+__Config:__
+
+You can change some config options at `build/config.json`
