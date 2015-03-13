@@ -1,6 +1,6 @@
 ![nu](public/images/nu.png)
 
-Starter boilerplate for Gulp
+Starter boilerplate for new projects
 
 __Includes:__
   * LiveReload
@@ -78,3 +78,52 @@ nakedapp
     ├── config.json
     └── gulpfile.json
 ````
+
+## Javascript
+
+You can use coffeescript, ES6 and React/JSX in the same project.
+
+#### Dependency management
+
+All your files import path are relative to the `src` folder:
+``` javascript
+var myLib = require("scripts/shared/lib/myLib");
+```
+
+You can load your templates the same way you load the Javascript files:
+``` javascript
+var Tmpl = require("templates/views/layout.jade");
+```
+
+#### ES6
+
+All the ES6 features are avaliable using the [Babel](https://babeljs.io/) pre-compiler.
+
+That means that you can import your files...
+``` javascript
+import * as myLib from "scripts/shared/lib/myLib";
+```
+
+...And export your methods using the ES6 syntax:
+``` javascript
+export function myMethod(x, y) {
+  return x + y;
+}
+```
+
+All the ES6 code will be converted to ES5 syntax and CJS pattern.
+
+#### React/JSX
+
+Yes, you can write React HTML methods using JSX too:
+``` javascript
+export default React.createClass({
+  render(): any {
+    return <div>
+      Yay!
+    </div>;
+  }
+});
+```
+
+You can even mix all these features and have some files written in coffeescript, es6 and es5 syntax... what a mess!
