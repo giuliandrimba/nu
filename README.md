@@ -127,3 +127,18 @@ export default React.createClass({
 ```
 
 You can even mix all these features and have some files written in coffeescript, es6 and es5 syntax... what a mess!
+
+## Stylesheets
+
+At the moment, this boilerplate only supports [http://learnboost.github.io/stylus/](Stylus) and CSS (as stylus support plain CSS).
+
+The CSS entry point is the `src/styles/app/styl`, all your styles must be linked to this file:
+
+#### Dependency management
+All your files import path are relative to the `styles` folder:
+> app.styl
+``` stylus
+@import "shared/reset.styl";
+```
+#### Plain CSS support
+Stylus support the plain CSS syntax!
