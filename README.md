@@ -8,6 +8,7 @@ __Includes:__
   * Javascript
   * Javascript ES6
   * CoffeeScript
+  * CSS
   * Stylus
   * HTML
   * Jade
@@ -45,7 +46,7 @@ nakedapp
 │    │   │   └── comp
 │    │   └── views
 │    └── templates
-│    │   ├── comp
+│        ├── comp
 │        └── views
 └── build
     ├── tasks
