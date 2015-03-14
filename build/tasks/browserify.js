@@ -14,8 +14,8 @@ gulp.task('browserify', function() {
   gulp.src(config.browserify.boot, { read: false })
     .pipe(browserify({
       debug: !env,
-      transform: ['coffeeify', "babelify", "reactify", 'jadeify', 'stringify'],
-      extensions: ['.coffee', '.jade', '.html'],
+      transform: ['coffeeify', "babelify", 'jadeify', 'stringify'],
+      extensions: ['.coffee', '.jade', '.html', '.jsx'],
       paths: ['../src', '../node_modules']
     }))
     .pipe(rename('app.js'))
