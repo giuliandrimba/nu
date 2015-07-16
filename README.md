@@ -1,4 +1,5 @@
-![nu](public/images/nu.png)
+NU
+==
 
 Starter boilerplate for new projects
 
