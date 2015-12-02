@@ -8,7 +8,8 @@ var styles = require("./tasks/styles");
 var images = require("./tasks/images");
 var sprites = require("./tasks/sprites");
 var watch = require("./tasks/watch");
+var bump = require("./tasks/bump");
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'browserify', 'sprites', 'images');
+    gulp.start('styles', 'browserify', 'sprites', 'images', 'bump');
 });
