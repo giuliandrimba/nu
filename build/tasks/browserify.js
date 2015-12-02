@@ -11,6 +11,8 @@ var server = require("./server");
 var config = require("../config.json");
 var jadeify = require("jadeify");
 var stringify = require("stringify");
+var error = require('./util/error');
+var log = require('./util/log');
 
 var env = argv.env != "production";
 
@@ -29,13 +31,17 @@ gulp.task('browserify', function() {
   .transform(stringify(['.html']));
 
   function bundle() {
+
+    log.start()
+
     b.bundle()
-    .on('error', gutil.log)
+    .on('error', error)
     .pipe(source("app.js"))
     .pipe(buffer())
     .pipe(argv.env != "production" ? gutil.noop() : gStreamify(uglify()))
     .pipe(gulp.dest(config.output.path))
-    .pipe(server.refresh());
+    .pipe(server.refresh())
+    .on('end', log.end);
   }
 
   return bundle()

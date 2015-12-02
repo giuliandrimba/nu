@@ -36,6 +36,7 @@
     "jade": "^1.7.0",
     "jadeify": "^4.5.0",
     "nib": "^1.1.0",
+    "pretty-hrtime": "^1.0.1",
     "remapify": "^2.1.0",
     "stringify": "^3.2.0",
     "vinyl-buffer": "^1.0.0",
