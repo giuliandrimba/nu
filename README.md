@@ -4,7 +4,7 @@ NU
 Starter boilerplate for new projects
 
 __Includes:__
-  * LiveReload
+  * BrowserSync
   * CommonJS
   * Javascript
   * Javascript ES6
@@ -50,8 +50,12 @@ nakedapp
 │        └── views
 └── build
     ├── tasks
+    │   ├── util
+    │   │   ├── error.js
+    │   │   └── log.js
     │   ├── browserify.js
     │   ├── build.js
+    │   ├── bump.js
     │   ├── clean.js
     │   ├── images.js
     │   ├── server.js
