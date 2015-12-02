@@ -23,12 +23,13 @@ gulp.task('browserify', function() {
     packageCache: {},
     entries: config.browserify.boot,
     debug: env,
-    extensions: ['.coffee', '.jade', '.html']
+    extensions: ['.coffee', '.jade', '.html'],
+    paths: ['../src/', '../src/scripts/']
   })
   .transform("coffeeify")
   .transform("babelify", {presets: ["es2015"]})
   .transform(jadeify)
-  .transform(stringify(['.html']));
+  .transform(stringify(['.html']))
 
   function bundle() {
 
