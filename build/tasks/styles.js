@@ -6,11 +6,13 @@ var server = require("./server");
 var config = require("../config.json");
 var sourcemaps = require('gulp-sourcemaps');
 var nib = require('nib');
+var plumber = require('gulp-plumber');
 
 var env = argv.env != "production";
 
 gulp.task('styles', function () {
   return gulp.src(config.styles.boot)
+    .pipe(plumber())
     .pipe(env != "production" ? gutil.noop() : sourcemaps.init())
     .pipe(stylus({
       use: [nib()],
