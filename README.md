@@ -13,7 +13,6 @@ __Includes:__
   * Stylus
   * HTML
   * Jade
-  * React/JSX
   * Sprite generation
   * Image optimization
 
@@ -65,7 +64,7 @@ nakedapp
 
 ## Javascript
 
-You can use coffeescript, ES6 and React/JSX in the same project.
+You can use coffeescript and ES6 in the same project.
 
 #### Dependency management
 
@@ -96,19 +95,6 @@ export function myMethod(x, y) {
 ```
 
 All the ES6 code will be converted to ES5 syntax and CJS pattern.
-
-#### React/JSX
-
-Yes, you can write React HTML methods using JSX too:
-``` javascript
-export default React.createClass({
-  render(): any {
-    return <div>
-      Yay!
-    </div>;
-  }
-});
-```
 
 You can even mix all these features and have some files written in coffeescript, es6 and es5 syntax... what a mess!
 
