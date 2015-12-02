@@ -28,9 +28,6 @@
   "images":
   {
     "src":"../src/images/**/*",
-    "img_name":"images/icons.png",
-    "img_dest":"../public",
-    "css_name":"sprite.styl",
-    "css_dest":"../src/styles/shared/"
+    "dest":"../public/images"
   }
 }
