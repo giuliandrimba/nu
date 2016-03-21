@@ -172,9 +172,9 @@ A `sprite.styl` file will be generated at `src/styles/shared/spritesheets/sprite
 ## Semver
 Every time you run `npm run build:dev` a minor bump will be added to the version. If you want to have control of the bump, you can run:
 
-`npm run bump --<patch|major|minor>`
+`npm run bump:<major|patch|minor>`
 
-Also, a html tag will be added to the top of the page with the project version and build time.
+Also, a html tag will be added on the top of the page with the project version and build time.
 > It will be removed if you run the production build
 
 ## Setup
