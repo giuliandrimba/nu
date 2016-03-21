@@ -181,6 +181,7 @@ Every time you run `npm run build:dev` a minor bump will be added to the version
 `npm run bump --<patch|major|minor>`
 
 Also, a html tag will be added to the top of the page with the project version and build time.
+> It will be removed if you run the production build
 
 ## Setup
 
