@@ -167,14 +167,7 @@ A `icons.styl` file will be generated at `src/styles/shared/icons.styl`, contain
 All the `.svg` files inside the `src/images/icons` folder will be assembled as one SVG at `public/images/sprite.svg`.
 
 #### CSS
-A `sprite.styl` file will be generated at `src/styles/shared/spritesheets/sprite.styl`, containing all the information about the icons.
-
-> Loading an icon:
-
-``` stylus
-.my-icon
- sprite($icon_name)
-```
+A `sprite.styl` file will be generated at `src/styles/shared/spritesheets/sprite.styl`, containing all the information about the sprites.
 
 ## Semver
 Every time you run `npm run build:dev` a minor bump will be added to the version. If you want to have control of the bump, you can run:
