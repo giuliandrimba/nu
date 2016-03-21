@@ -97,6 +97,14 @@ At the moment, this boilerplate only supports [Stylus](http://learnboost.github.
 
 The CSS entry point is the `src/styles/app/styl`, all your styles must be linked to this file:
 
+#### Nib
+You can import [Nib](http://nibstyl.us/) to use its features/mixins.
+
+``` stylus
+@import "nib"
+```
+
+
 #### Dependency management
 All your files import path are relative to the `styles` folder:
 > app.styl
@@ -145,7 +153,7 @@ console.log(tmpl); // <div class='layout'><h1>Hello World!</h1></div>
 All the `.png` files inside the `src/images/icons` folder will be assembled as one image at `public/images/icons.png`.
 
 #### CSS
-A `sprites.styl` file will be generated at `src/styles/shared/sprites.styl`, containing all the information about the icons.
+A `icons.styl` file will be generated at `src/styles/shared/icons.styl`, containing all the information about the icons.
 
 > Loading an icon:
 
@@ -154,11 +162,11 @@ A `sprites.styl` file will be generated at `src/styles/shared/sprites.styl`, con
  sprite($icon_name)
 ```
 
-## SVG
-All the `.svg` files inside the `src/images/svg` folder will be assembled as one SVG at `public/images/icons.svg`.
+## SVG spritesheet
+All the `.svg` files inside the `src/images/icons` folder will be assembled as one SVG at `public/images/sprite.svg`.
 
 #### CSS
-A `svg.styl` file will be generated at `src/styles/shared/svg.styl`, containing all the information about the icons.
+A `sprite.styl` file will be generated at `src/styles/shared/spritesheets/sprite.styl`, containing all the information about the icons.
 
 > Loading an icon:
 
@@ -171,17 +179,21 @@ A `svg.styl` file will be generated at `src/styles/shared/svg.styl`, containing 
 
 __Install dependencies:__
 
-` make`
+` npm install`
 
 __Watch:__
 
-` make w`
+` npm run watch`
   
   > Open http://localhost:3000
 
 __Build:__
 
-` make b`
+` npm run build:dev`
+
+or 
+
+` npm run build:prod`
 
 __Config:__
 

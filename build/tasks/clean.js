@@ -1,11 +1,16 @@
 var gulp = require("gulp");
 var del = require("del");
 var cache = require("gulp-cache");
+var path = require("path");
 
 var config = require("../config.json")
 
 gulp.task('clean', function(cb) {
-  cache.clearAll(function() {
-      del([config.output.path + "/" + config.output.styles, config.output.path + "/" + config.output.scripts, config.output.path + "/images", config.data.dest, config.audio.dest], {force:true}, cb)
-  });
+  var styles = path.resolve(config.output.path + "/" + config.output.styles)
+  var scripts = path.resolve(config.output.path + "/" + config.output.scripts)
+  var images = path.resolve(config.output.path + "/images");
+  var data = path.resolve(config.data.dest);
+  var audio = path.resolve(config.audio.dest);
+  return del([styles, scripts, images, data, audio], {force:true}, cb)
+  // del(["public/images"], {force:true}, cb)
 });

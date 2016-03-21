@@ -1,7 +1,7 @@
 {
   "output":
   {
-    "path": "../public"
+    "path": "./public"
   },
   "server":
   {
@@ -20,17 +20,17 @@
   "html":
   {
     "src":"./src/templates/index.html",
-    "dest":"../public/"
+    "dest":"./public/"
   },
   "audio":
   {
     "src":"src/audio/**/*",
-    "dest":"../public/audio"
+    "dest":"./public/audio"
   },
   "data":
   {
     "src":"src/data/**/*",
-    "dest":"../public/data"
+    "dest":"./public/data"
   },
   "locale":
   {
@@ -41,26 +41,26 @@
   {
     "src":"./src/images/icons/*.png",
     "img_name":"images/icons.png",
-    "img_dest":"../public",
+    "img_dest":"./public",
     "css_name":"icons.styl",
     "css_dest":"./src/styles/shared/spritesheet",
     "svg":{
       "src":"./src/images/icons/*.svg",
-      "img_dest":"src/styles"
+      "dest":"src/styles"
     }
   },
   "images":
   {
     "src":"./src/images/**/*",
-    "dest":"../public/images",
+    "dest":"./public/images",
     "sequences": {
       "src":"./src/images/sequences/**/*",
-      "dest":"../public/images/sequences"
+      "dest":"./public/images/sequences"
     }
   },
   "fonts":
   {
     "src":"./src/fonts/**/*",
-    "dest":"../public/fonts"
+    "dest":"./public/fonts"
   }
 }
