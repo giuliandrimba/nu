@@ -42,13 +42,21 @@
     "src":"./src/images/icons/*.png",
     "img_name":"images/icons.png",
     "img_dest":"../public",
-    "css_name":"sprite.styl",
-    "css_dest":"./src/styles/shared/"
+    "css_name":"icons.styl",
+    "css_dest":"./src/styles/shared/spritesheet",
+    "svg":{
+      "src":"./src/images/icons/*.svg",
+      "img_dest":"src/styles"
+    }
   },
   "images":
   {
     "src":"./src/images/**/*",
-    "dest":"../public/images"
+    "dest":"../public/images",
+    "sequences": {
+      "src":"./src/images/sequences/**/*",
+      "dest":"../public/images/sequences"
+    }
   },
   "fonts":
   {

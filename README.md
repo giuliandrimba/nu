@@ -154,6 +154,19 @@ A `sprites.styl` file will be generated at `src/styles/shared/sprites.styl`, con
  sprite($icon_name)
 ```
 
+## SVG
+All the `.svg` files inside the `src/images/svg` folder will be assembled as one SVG at `public/images/icons.svg`.
+
+#### CSS
+A `svg.styl` file will be generated at `src/styles/shared/svg.styl`, containing all the information about the icons.
+
+> Loading an icon:
+
+``` stylus
+.my-icon
+ sprite($icon_name)
+```
+
 ## Setup
 
 __Install dependencies:__

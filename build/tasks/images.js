@@ -32,8 +32,8 @@ function images() {
 
 gulp.task('image:sequences', function() {
 
-  return gulp.src(['./src/images/experience/sequences/**/*'])
+  return gulp.src([config.images.sequences.src])
     .pipe(changed(config.images.dest))
     .pipe(debug())
-    .pipe(gulp.dest("../../website/images/experience/sequences"));
+    .pipe(gulp.dest(config.images.sequences.dest));
 });
