@@ -25,11 +25,12 @@ nakedapp
 ├── README.md
 ├── package.json
 ├── .gitignore
-├── Makefile
 ├── LICENSE
+├── gulpfile.js
 ├── public
 │    ├─── images
 │    │    └── icons.png
+│    │    └── sprite.svg
 │    ├─── app.js
 │    ├─── index.html
 │    └─── app.css
@@ -49,14 +50,15 @@ nakedapp
 │    ├── styles
 │    │   ├── shared
 │    │   │   └── comp
+│    │   │   └── spritesheets
 │    │   └── views
 │    └── templates
 │        ├── comp
 │        └── views
+│        └── index.html
 └── build
     ├── tasks
-    ├── config.json
-    └── gulpfile.json
+    └── config.json
 ````
 
 ## Javascript
@@ -103,7 +105,6 @@ You can import [Nib](http://nibstyl.us/) to use its features/mixins.
 ``` stylus
 @import "nib"
 ```
-
 
 #### Dependency management
 All your files import path are relative to the `styles` folder:
