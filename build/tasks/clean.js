@@ -12,5 +12,4 @@ gulp.task('clean', function(cb) {
   var data = path.resolve(config.data.dest);
   var audio = path.resolve(config.audio.dest);
   return del([styles, scripts, images, data, audio], {force:true}, cb)
-  // del(["public/images"], {force:true}, cb)
 });
