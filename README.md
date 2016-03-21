@@ -175,7 +175,7 @@ A `sprite.styl` file will be generated at `src/styles/shared/spritesheets/sprite
  sprite($icon_name)
 ```
 
-## SemVer
+## Semver
 Every time you run `npm run build:dev` a minor bump will be added to the version. If you want to have control of the bump, you can run:
 
 `npm run bump --<patch|major|minor>`
