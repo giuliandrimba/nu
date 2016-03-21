@@ -9,25 +9,50 @@
   },
   "browserify":
   {
-    "path":"../src/",
-    "boot":"../src/scripts/app.js"
+    "path":"./src/",
+    "boot":"./src/scripts/app.js"
   },
   "styles":
   {
-    "path":"../src/styles",
-    "boot":"../src/styles/app.styl"
+    "path":"./src/styles",
+    "boot":"./src/styles/app.styl"
+  },
+  "html":
+  {
+    "src":"./src/templates/index.html",
+    "dest":"../public/"
+  },
+  "audio":
+  {
+    "src":"src/audio/**/*",
+    "dest":"../public/audio"
+  },
+  "data":
+  {
+    "src":"src/data/**/*",
+    "dest":"../public/data"
+  },
+  "locale":
+  {
+    "src":"src/data/translations",
+    "dest":"src/scripts/data/translations"
   },
   "sprites":
   {
-    "src":"../src/images/icons/*.png",
+    "src":"./src/images/icons/*.png",
     "img_name":"images/icons.png",
     "img_dest":"../public",
     "css_name":"sprite.styl",
-    "css_dest":"../src/styles/shared/"
+    "css_dest":"./src/styles/shared/"
   },
   "images":
   {
-    "src":"../src/images/**/*",
+    "src":"./src/images/**/*",
     "dest":"../public/images"
+  },
+  "fonts":
+  {
+    "src":"./src/fonts/**/*",
+    "dest":"../public/fonts"
   }
 }

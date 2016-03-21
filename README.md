@@ -8,13 +8,15 @@ __Includes:__
   * CommonJS
   * Javascript
   * Javascript ES6
-  * CoffeeScript
   * CSS
   * Stylus
   * HTML
   * Jade
+  * Handlebars
   * Sprite generation
   * Image optimization
+  * Semver tag
+  * Locale
 
 __Structure:__
 
@@ -32,6 +34,9 @@ nakedapp
 │    ├─── index.html
 │    └─── app.css
 │── src
+│    ├── audio
+│    ├── data
+│    ├── fonts
 │    ├── images
 │    │   └── icons
 │    ├── scripts
@@ -50,25 +55,11 @@ nakedapp
 │        └── views
 └── build
     ├── tasks
-    │   ├── util
-    │   │   ├── error.js
-    │   │   └── log.js
-    │   ├── browserify.js
-    │   ├── build.js
-    │   ├── bump.js
-    │   ├── clean.js
-    │   ├── images.js
-    │   ├── server.js
-    │   ├── sprites.js
-    │   ├── styles.js
-    │   └── watch.js
     ├── config.json
     └── gulpfile.json
 ````
 
 ## Javascript
-
-You can use coffeescript and ES6 in the same project.
 
 #### Dependency management
 
@@ -79,7 +70,7 @@ var myLib = require("scripts/shared/lib/myLib");
 
 You can load your templates the same way you load the Javascript files:
 ``` javascript
-var Tmpl = require("templates/views/layout.jade");
+var Tmpl = require("templates/views/layout.hbs");
 ```
 
 #### ES6
@@ -100,8 +91,6 @@ export function myMethod(x, y) {
 
 All the ES6 code will be converted to ES5 syntax and CJS pattern.
 
-You can even mix all these features and have some files written in coffeescript, es6 and es5 syntax... what a mess!
-
 ## Stylesheets
 
 At the moment, this boilerplate only supports [Stylus](http://learnboost.github.io/stylus/) and CSS (as stylus support plain CSS).
@@ -119,9 +108,9 @@ All your files import path are relative to the `styles` folder:
 Stylus support the plain CSS syntax!
 
 ## Templates
-You can use [Jade](http://jade-lang.com/) or regular HTML as templates, and import them in your scripts:
+You can use [Jade](http://jade-lang.com/), [Handlebars](http://handlebarsjs.com/), or regular HTML as templates, and import them in your scripts:
 
-> Using Jade
+> Using Jade or Handlebars
 
 ``` jade
 .layout

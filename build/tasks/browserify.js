@@ -13,23 +13,31 @@ var jadeify = require("jadeify");
 var stringify = require("stringify");
 var error = require('./util/error');
 var log = require('./util/log');
-
+var watchify = require("watchify");
 var env = argv.env != "production";
 
 gulp.task('browserify', function() {
+  return buildBrowserify()
+});
 
+function buildBrowserify() {
   var b = browserify({
     cache: {},
     packageCache: {},
     entries: config.browserify.boot,
     debug: env,
-    extensions: ['.coffee', '.jade', '.html'],
-    paths: ['../src/', '../src/scripts/']
+    extensions: ['.jade', '.html', '.hbs'],
+    paths: ['./src/', './src/scripts/']
   })
-  .transform("coffeeify")
+  .transform("hbsfy")
   .transform("babelify", {presets: ["es2015"]})
   .transform(jadeify)
   .transform(stringify(['.html']))
+
+  if(argv.watch) {
+    b = watchify(b)
+    b.on('update', bundle);
+  }
 
   function bundle() {
 
@@ -46,4 +54,4 @@ gulp.task('browserify', function() {
   }
 
   return bundle()
-});
+}
