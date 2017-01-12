@@ -1,6 +1,6 @@
 {
   "name": "nu",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Starter boilerplate for Gulp",
   "main": "index.js",
   "scripts": {

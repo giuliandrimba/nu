@@ -62,5 +62,10 @@
   {
     "src":"./src/fonts/**/*",
     "dest":"./public/fonts"
+  },
+   "video":
+  {
+    "src":"src/video/**/*",
+    "dest":"./public/video"
   }
 }

@@ -13,3 +13,4 @@ var locale = require("./build/tasks/locale");
 var data = require("./build/tasks/data");
 var audio = require("./build/tasks/audio");
 var html = require("./build/tasks/html");
+var video = require("./build/tasks/video");
