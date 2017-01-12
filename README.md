@@ -29,6 +29,7 @@ nakedapp
 ├── gulpfile.js
 ├── public
 │    ├─── images
+│    │    ├── sequences
 │    │    └── icons.png
 │    │    └── sprite.svg
 │    ├─── app.js
@@ -39,6 +40,7 @@ nakedapp
 │    ├── data
 │    ├── fonts
 │    ├── images
+│    │   ├── sequences
 │    │   └── icons
 │    ├── scripts
 │    │   ├── models
