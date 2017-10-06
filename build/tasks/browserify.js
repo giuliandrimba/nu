@@ -29,7 +29,7 @@ function buildBrowserify() {
     extensions: ['.jade', '.html', '.hbs'],
     paths: ['./src/', './src/scripts/']
   })
-  .transform("hbsfy")
+  .transform("hbsfy", {traverse: true})
   .transform("babelify", {presets: ["es2015"]})
   .transform(jadeify)
   .transform(stringify(['.html']))
