@@ -30,7 +30,7 @@ function buildBrowserify() {
     paths: ['./src/', './src/scripts/']
   })
   .transform("hbsfy", {traverse: true})
-  .transform("babelify", {presets: ["es2015"]})
+  .transform("babelify", {presets: ["env","react"]})
   .transform(jadeify)
   .transform(stringify(['.html']))
 
